@@ -1,0 +1,51 @@
+# Compteur de caractères
+# Fait le 11 septembre
+# Créé par Gabriel Auger-Herrera
+
+# variables
+global text
+global space
+global answer5
+global answer2
+espace = 0
+continue1 = True
+answer5 = 'non'
+
+# mot d’introduction
+print(
+   'Bienvenue au compteur de mots.')
+print(
+   'Veuillez noter que vous ne pouvez avoir d\'espaces entre votre paragraphes lorsque vous voulez insérer un texte. ')
+
+# permettre  l'utilisateur de compter le nombre de mots sans refaire le code
+while continue1:
+   espace = 0
+   if answer5 == 'non':
+       print('')
+       # insérer le text
+       text1: str = (input(str('Insérez votre text ici: ')))
+
+   else:
+       print('')
+
+   global answer2
+   # input qui demande ce que l’utilisateur désire
+   answer2 = input(str('pour compter le nombre de mots, cliquez sur la tuile 1 sur votre clavier  et ensuite cliquersur la touche enter '
+                       'le compteur de mots '))
+
+   # trouver ce que l'utilisateur désire faire:
+   if answer2 == '1':
+       #compter le nombre de mots en tenant compte des espaces
+       for i in text1:
+           if i.isspace():
+               espace = espace + 1
+       print('Votre texte contient ', espace + 1, ' mots.')
+   # demander si l'utilisateur désire refaire le code
+   answer3 = input(
+       str('Voulez vous continuer d\'utiliser le compteur de caractères? (Spécifiez votre choix par oui ou non): '))
+   if answer3 == 'oui':
+       answer4 = input(str('Voulez-vous utiliser de nouveau ce texte?(Spécifiez votre choix par oui ou non): '))
+   else:
+       continue1 = False
+
+
