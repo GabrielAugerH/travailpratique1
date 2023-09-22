@@ -1,0 +1,14 @@
+# Compteur de caractères
+# Fait le 11 septembre
+# Créé par Gabriel Auger-Herrera
+
+
+question = str(input("please write something \n"))
+def word_count (words=None):
+    words
+    count =  len(words)
+    return count
+
+count_word = input('what do you want to write')
+answer: int = word_count()
+print('you have' + answer + 'words in you text')
